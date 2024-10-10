@@ -60,23 +60,12 @@
 
 }
 
-/* .open-sans- {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-} */
-
 :root {
   font-family: "Open Sans","space-grotesk", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* --start-page-bg-color: #facb00; */
   --start-page-bg-color: var(--lunch-section-color);
   --btn-color: #ffffff;
   --btn-hover-color: var(--start-page-bg-color);
   --header-btn-accent-color: #fa7500;
-  /* --header-btn-accent-color: #652640; */
   --header-bg-color: #ffffff;
   --header-height: 7rem;
   --footer-height: 3rem;
@@ -86,13 +75,11 @@
 }
 
 body {
-  /* min-height: calc(100vh - var(--header-height) - var(--footer-height)); */
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 #content {
-  /* height: calc(100vh - var(--header-height) - var(--footer-height)); */
   flex: 1;
   width: 100%;
   background-color: var(--headline-color);
@@ -101,7 +88,7 @@ body {
 
 header {
   min-height: var(--header-height);
-  background-color: var(--header-bg-color);
+  background-color: var(--lunch-section-color);
   display: flex;
   justify-content: center;
 }
@@ -112,18 +99,17 @@ header > nav {
   gap: 1.5rem;
 }
 
+
 header > nav > button {
-  width: 10rem;
+  width: 15rem;
   border: none;
   padding: 0px;
   display: grid;
   grid-template-rows: 1fr 0.6rem;
   align-items: center;
-  background-color: var(--btn-color);
-  font-size: 1.2rem;
+  background-color: var(--lunch-section-color);
+  font-size: 1.5rem;
   font-weight: 500;
-  /* box-shadow: 7px 8px 17px 3px rgba(0, 0, 0, 0.459); */
-  box-shadow: var(--main-box-shadow);
 }
 header > nav > button:hover {
   background-color: var(--btn-hover-color);
@@ -145,11 +131,9 @@ header > nav > button:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
 
 }
 
@@ -245,9 +229,6 @@ footer {
 .menu-header-img {
   background-image: url("./graffiti-2.jpg");
   min-height: 50vh;
-  /* background-attachment: fixed; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
   background-size: cover;
 }
 
@@ -287,7 +268,6 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: 1.5rem;
-  /* grid-template-rows: repeat(auto-fill, minmax(400px, 400px)); */
 }
 
 .menu-card {
@@ -324,7 +304,6 @@ li {
   p, a {
     position: absolute;
     opacity: 0;
-    /* max-width: 80%; */
     transition: opacity .3s ease-out;
   }
   

@@ -6,7 +6,7 @@ import avocadoSmashImg from "./img/avocado-smash.jpeg"
 
 export class MenuPage {
     static newElement(type, className, parent) {
-        this.element = Object.assign(document.createElement(type), {className: className});
+        this.element = Object.assign(document.createElement(type), { className: className });
         if (parent) {
             parent.appendChild(this.element);
             return this.element;
@@ -15,8 +15,8 @@ export class MenuPage {
             return this.element;
         }
     }
-    
-    static newLunchListitem (day, itemName, description) {
+
+    static newLunchListitem(day, itemName, description) {
         this.listItem = this.newElement("li", "lunch-list-item");
         // Headline
         this.headline = this.newElement("h2", "lunch-day headline", this.listItem);
@@ -31,7 +31,7 @@ export class MenuPage {
         return this.listItem;
     }
 
-    static newMenuCard (imgPath, itemName, description) {
+    static newMenuCard(imgPath, itemName, description) {
         // card
         this.card = this.newElement("div", "menu-card");
         // img
@@ -75,10 +75,6 @@ export class MenuPage {
         // lunch list
         this.lunchList = this.newElement("ul", "lunch-list", this.lunchMenu);
 
-
-
-
-
         // lunch list items
         this.lunchMenuItemArr = [
             {
@@ -112,7 +108,7 @@ export class MenuPage {
                 imgPath: avocadoSmashImg
             }
         ];
-        
+
 
         this.lunchMenuItemArr.forEach(item => {
             this.newItem = this.newLunchListitem(item.day, item.itemName, item.itemDescription);
@@ -132,8 +128,6 @@ export class MenuPage {
             this.newCard = this.newMenuCard(item.imgPath, item.itemName, item.itemDescription);
             this.menuCardsContent.appendChild(this.newCard);
         });
-
-
 
         parent = document.getElementById("content");
         parent.appendChild(this.menuContainer);
