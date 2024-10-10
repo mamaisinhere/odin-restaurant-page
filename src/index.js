@@ -1,6 +1,7 @@
-import "./styles.css"
-import { StartPage } from "./start-page.js"
+import "./styles.css";
+import { StartPage } from "./start-page.js";
 import { AboutPage } from "./about-page.js";
+import { MenuPage } from "./menu-page.js";
 
 StartPage.render();
 
@@ -11,7 +12,6 @@ const clearContent = () => {
 const homeBtn = document.getElementById("home-btn");
 const aboutBtn = document.getElementById("about-btn");
 const menuBtn = document.getElementById("menu-btn");
-const orderBtn = document.getElementById("order-btn");
 
 homeBtn.addEventListener("click", () => {
     clearContent();
@@ -21,4 +21,9 @@ homeBtn.addEventListener("click", () => {
 aboutBtn.addEventListener("click", () => {
     clearContent();
     AboutPage.render();
+});
+
+menuBtn.addEventListener("click", () => {
+    clearContent();
+    MenuPage.render();
 });

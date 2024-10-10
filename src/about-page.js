@@ -13,7 +13,6 @@ export class AboutPage {
         this.img = document.createElement("img");
         this.img.src = source;
 
-        console.log(this.img.src);
         this.p = Object.assign(document.createElement("p"), { className: "staff-name" });
         this.p.textContent = staffName;
 
